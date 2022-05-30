@@ -1,0 +1,26 @@
+@import "./libs/reset.scss";
+@import "./libs/functions.scss";
+@import "./libs/mixins.scss";
+
+/*fonts*/
+$font-primary:'Montserrat', sans-serif;
+/*colors*/
+$color-primary:#4E5150;
+$color-secondary:#A9A9A9;
+$color-box: #E5E5E5;
+$color-footer: #B9BDCF;
+/*padding*/
+$padding-mobile: widthInVW(12);
+$padding-desktop: widthInVW(238, 1440);
+
+html{
+    font-family: $font-primary;
+    color: $color-primary;
+}
+.container{
+    width: 100%;
+    padding: {
+        left: $padding-mobile;
+        right: $padding-mobile;
+    };
+}
