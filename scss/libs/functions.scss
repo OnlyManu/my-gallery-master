@@ -16,3 +16,6 @@
 @function widthInRem($s){
     @return math.div($s, 14)*1rem;
 }
+@function heightInRem($s){
+    @return math.div($s, 14)*1rem;
+}

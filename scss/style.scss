@@ -25,3 +25,145 @@ html{
         right: $padding-mobile;
     };
 }
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: heightInVH(30, 717);
+    margin-bottom: heightInVH(39, 717);
+    .profil-picture{
+        width: widthInVW(101.76);
+        height: auto;
+        margin-bottom: heightInVH(11.24, 717);
+        border-radius: 16px;
+        background-color: #BDBDBD;
+    }
+    .profil-infos{
+        display: flex;
+        flex-direction: column;
+        gap: heightInVH(4, 717);
+        align-items: center;
+        margin-bottom: heightInVH(12, 717);
+    }
+    .profil-stats{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 24px;
+    }
+}
+.profil-infos{
+    .name{
+        @include setFontProps(14, 17, 600);
+    }
+    .town{
+        @include setFontProps(12, 10, 600);
+        color: $color-secondary;
+    }
+}
+.profil-stats{
+    .box{
+        @include setFontProps(12, 15, 600);
+        background-color: $color-box;
+        border-radius: 12px;
+        width: widthInVW(78);
+        height: 52px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+    }
+    .stat{
+        color: $color-secondary;
+    }
+}
+main{
+    margin-bottom: heightInVH(44, 717);
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(1fr, 4);
+    grid-template-areas: 
+    "index1 index2 index2"
+    "index3 index3 index4"
+    "index5 index6 index4"
+    ;
+    gap: 12px;
+    .img{
+        width: 100%;
+        height: auto;
+        background: #C4C4C4;
+        border-radius: 12px;
+    }
+    @for $i from 1 through 6{
+        .index-#{$i}{
+            grid-area: index#{$i};
+        }
+    }
+}
+footer{
+    @include setFontProps(14, 17, 500);
+    color: $color-footer;
+    text-align: center;
+    margin-bottom: 24px;
+    .author{
+        text-decoration: none;
+        color: $color-footer;
+        font-weight: 700;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header{
+        margin: {
+            top: 60px;
+            bottom: 64px;
+        };
+        .profil-picture{
+            width: widthInVW(156, 1440);
+            margin-bottom: 16px;
+        }
+        .profil-infos{
+            gap: heightInRem(8);
+            margin-bottom: 24px;
+        }
+        .profil-stats{
+            column-gap: widthInVW(24, 1440);
+        }
+    }
+    .profil-infos{
+        .name{
+            @include setFontProps(24, 29, 600)
+        }
+        .town{
+            @include setFontProps(14, 17, 600)
+        }
+    }
+    .profil-stats{
+        .box{
+            width: widthInVW(100, 1440);
+            height: heightInRem(67);
+            .stat{
+                @include setFontProps(14, 17, 600)
+            }
+            .value{
+                @include setFontProps(18, 22, 600)
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 912px) {
+    .container{
+        padding: {
+            left: $padding-desktop;
+            right: $padding-desktop;
+        };
+    }
+    .gallery{
+        gap: widthInVW(32, 1440);
+    }
+}

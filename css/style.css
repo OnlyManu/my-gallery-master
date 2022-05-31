@@ -49,12 +49,176 @@ td, th {
 html {
   font-family: "Montserrat", sans-serif;
   color: #4E5150;
+  background-color: #FFFFFF;
 }
 
 .container {
   width: 100%;
   padding-left: 3.2vw;
   padding-right: 3.2vw;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4.1841004184vh;
+  margin-bottom: 5.4393305439vh;
+}
+header .profil-picture {
+  width: 27.136vw;
+  height: auto;
+  margin-bottom: 1.5676429568vh;
+  border-radius: 16px;
+  background-color: #BDBDBD;
+}
+header .profil-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5578800558vh;
+  align-items: center;
+  margin-bottom: 1.6736401674vh;
+}
+header .profil-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 24px;
+}
+
+.profil-infos .name {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2142857143rem;
+}
+.profil-infos .town {
+  font-size: 0.8571428571rem;
+  font-weight: 600;
+  line-height: 0.7142857143rem;
+  color: #A9A9A9;
+}
+
+.profil-stats .box {
+  font-size: 0.8571428571rem;
+  font-weight: 600;
+  line-height: 1.0714285714rem;
+  background-color: #E5E5E5;
+  border-radius: 12px;
+  width: 20.8vw;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.profil-stats .stat {
+  color: #A9A9A9;
+}
+
+main {
+  margin-bottom: 6.1366806137vh;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(1fr, 4);
+  grid-template-areas: "index1 index2 index2" "index3 index3 index4" "index5 index6 index4";
+  gap: 12px;
+}
+.gallery .img {
+  width: 100%;
+  height: auto;
+  background: #C4C4C4;
+  border-radius: 12px;
+}
+.gallery .index-1 {
+  grid-area: index1;
+}
+.gallery .index-2 {
+  grid-area: index2;
+}
+.gallery .index-3 {
+  grid-area: index3;
+}
+.gallery .index-4 {
+  grid-area: index4;
+}
+.gallery .index-5 {
+  grid-area: index5;
+}
+.gallery .index-6 {
+  grid-area: index6;
+}
+
+footer {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2142857143rem;
+  color: #B9BDCF;
+  text-align: center;
+  margin-bottom: 24px;
+}
+footer .author {
+  text-decoration: none;
+  color: #B9BDCF;
+  font-weight: 700;
+}
+footer .author:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    margin-top: 60px;
+    margin-bottom: 64px;
+  }
+  header .profil-picture {
+    width: 10.8333333333vw;
+    margin-bottom: 16px;
+  }
+  header .profil-infos {
+    gap: 0.5714285714rem;
+    margin-bottom: 24px;
+  }
+  header .profil-stats {
+    column-gap: 1.6666666667vw;
+  }
+
+  .profil-infos .name {
+    font-size: 1.7142857143rem;
+    font-weight: 600;
+    line-height: 2.0714285714rem;
+  }
+  .profil-infos .town {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2142857143rem;
+  }
+
+  .profil-stats .box {
+    width: 6.9444444444vw;
+    height: 4.7857142857rem;
+  }
+  .profil-stats .box .stat {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2142857143rem;
+  }
+  .profil-stats .box .value {
+    font-size: 1.2857142857rem;
+    font-weight: 600;
+    line-height: 1.5714285714rem;
+  }
+}
+@media screen and (min-width: 912px) {
+  .container {
+    padding-left: 16.5277777778vw;
+    padding-right: 16.5277777778vw;
+  }
+
+  .gallery {
+    gap: 2.2222222222vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
