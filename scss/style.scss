@@ -145,7 +145,7 @@ footer{
     }
     .profil-stats{
         .box{
-            width: widthInVW(100, 1440);
+            width: widthInRem(100);
             height: heightInRem(67);
             .stat{
                 @include setFontProps(14, 17, 600)
