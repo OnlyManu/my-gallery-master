@@ -210,7 +210,7 @@ footer .author:hover {
     line-height: 1.5714285714rem;
   }
 }
-@media screen and (min-width: 912px) {
+@media screen and (min-width: 992px) {
   .container {
     padding-left: 16.5277777778vw;
     padding-right: 16.5277777778vw;
