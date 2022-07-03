@@ -88,7 +88,7 @@ main{
     "index3 index3 index4"
     "index5 index6 index4"
     ;
-    gap: 12px;
+    gap: widthInVW(12);
     .img{
         width: 100%;
         height: auto;
